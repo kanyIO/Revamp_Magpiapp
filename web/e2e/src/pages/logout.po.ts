@@ -5,7 +5,8 @@ export class Logout {
     Signout: ElementFinder;
 
     constructor() {
-        this.Settings = $("button.btn");
+        this.Settings = $("div.btn-group.show");
+        // this.Settings = $("button.btn");
         // this.Settings = element(by.cssContainingText("btn-primary dropdown-toggle"));
         // this.Settings = $("//div[@class='mr-2']");
         // this.Settings = $("div[contains(@class, 'mr-2')]");
@@ -13,7 +14,8 @@ export class Logout {
         // $("//div[contains(concat(' ', @class, ' '), ' mr-2 ')]");
         // //div[contains(concat(' ', normalize-space(@class), ' '), ' mr-2 ')]
 
-        this.Signout = $("button.dropdown-item");
+        // this.Settings = $("button.dropdown-item");
+        this.Signout = $("button[value='Logout']");
         // //html/body/app-root/div/ng-component/div/div/nav/div/div/button[2]");
     }
 }

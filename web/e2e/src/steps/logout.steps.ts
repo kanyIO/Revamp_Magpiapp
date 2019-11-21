@@ -10,7 +10,6 @@ Given("I want to logout", async () => {
 });
 
 When("I select you are logged in as user", { timeout: 3 * 80000 }, async () => {
-
     await page4.Settings.click();
 });
 
