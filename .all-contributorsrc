@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "muthaka",
+      "name": "Peter Muthaka",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5586643?v=4",
+      "profile": "https://github.com/muthaka",
+      "contributions": [
+        "code",
+        "review",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Revamp_Magpiapp",
+  "projectOwner": "kanyIO",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
