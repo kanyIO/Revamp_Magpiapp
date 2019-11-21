@@ -1,0 +1,128 @@
+<div class="container-fluid">
+    <div class="row mh-100vh random-bg">
+        <div class="col">
+            <div class="mt-2 mb-5 nav justify-content-end">
+                <app-language-dropdown></app-language-dropdown>
+            </div>
+            <h1 class="mb-3 font-weight-normal text-center text-lowercase">
+                <img class="logo" src="/assets/images/logo.png" alt="Magpi" />
+                {{ "app.name" | translate }}
+            </h1>
+            <div class="mb-5 mx-auto card page">
+                <div class="p-4 card-body">
+                    <form [formGroup]="formGroup">
+                        <div class="form-group">
+                            <label class="label">
+                                {{ "common.username.or.email" | translate }}
+                            </label>
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    class="form-control border-right-0"
+                                    [formControl]="username"
+                                    [placeholder]="
+                                        'common.username.or.email' | translate
+                                    "
+                                    ngbTooltip
+                                    appErrorTooltip
+                                />
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                        <i
+                                            class="mdi"
+                                            [ngClass]="{
+                                                'mdi-check-circle-outline text-success':
+                                                    username.valid,
+                                                'mdi-alert-circle-outline text-danger':
+                                                    (username.touched ||
+                                                        username.dirty) &&
+                                                    username.invalid
+                                            }"
+                                        ></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">
+                                {{ "common.password" | translate }}
+                            </label>
+                            <div class="input-group">
+                                <input
+                                    type="password"
+                                    class="form-control border-right-0"
+                                    [formControl]="password"
+                                    [placeholder]="
+                                        'common.password' | translate
+                                    "
+                                    ngbTooltip
+                                    appErrorTooltip
+                                />
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                        <i
+                                            class="mdi"
+                                            [ngClass]="{
+                                                'mdi-check-circle-outline text-success':
+                                                    password.valid,
+                                                'mdi-alert-circle-outline text-danger':
+                                                    (password.touched ||
+                                                        password.dirty) &&
+                                                    password.invalid
+                                            }"
+                                        ></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="form-group d-flex justify-content-between align-items-center"
+                        >
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        [formControl]="persistent"
+                                    />
+                                    {{ "login.persistent" | translate }}
+                                </label>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-link"
+                                routerLink="/forgot-password"
+                            >
+                                {{ "login.forgot.password" | translate }}
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <button
+                                type="button"
+                                class="btn btn-primary btn-block"
+                                (click)="onLoginButtonClick()"
+                            >
+                                {{ "login.signin" | translate }}
+                            </button>
+                        </div>
+                        <div class="form-group text-center">
+                            <a
+                                class="text-dark"
+                                routerLink="/signup"
+                                [innerHTML]="'login.signup' | translate"
+                            ></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <p class="font-weight-bold text-center">
+                {{ "common.copyright" | translate }}
+            </p>
+            <p class="font-weight-bold text-center">
+                {{
+                    "common.version" | translate: { version: version$ | async }
+                }}
+            </p>
+        </div>
+    </div>
+</div>

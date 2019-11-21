@@ -1,0 +1,82 @@
+// Variables
+@import "src/theme/app-var";
+// @import "src/home/features/form/";
+// @import "/Users/melissakanyi/Downloads/magpi-app-master/web/src/home/features/form";
+$expanded-width: 16rem;
+$collapsed-width: 4rem;
+
+.sidebar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #ffffff;
+
+    &.expanded {
+        min-width: $expanded-width;
+        max-width: $expanded-width;
+    }
+
+    &.collapsed {
+        min-width: $collapsed-width;
+        max-width: $collapsed-width;
+
+        .logo {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            &+* {
+                display: none;
+            }
+        }
+
+        .menu-title {
+            display: none;
+        }
+    }
+}
+
+.content {
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #f3f4fa;
+    transition: all 0.3s;
+
+    .fixed-top {
+        transition: all 0.3s;
+    }
+
+    &.expanded {
+        width: calc(100% - #{$expanded-width});
+
+        .fixed-top {
+            left: $expanded-width;
+        }
+    }
+
+    &.collapsed {
+        width: calc(100% - #{$collapsed-width});
+
+        .fixed-top {
+            left: $collapsed-width;
+        }
+    }
+
+    .page-content {
+        padding-top: $content-nav-padding;
+    }
+
+    .btn-social {
+        padding: 0.75rem 0.9rem;
+        color: white;
+        border-radius: 50%;
+    }
+
+    .btn-twitter {
+        background: #4dbff4;
+    }
+
+    .btn-linkedin {
+        background: #0177b4;
+    }
+}

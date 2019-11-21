@@ -1,0 +1,73 @@
+{
+  "app.name": "Magpi",
+  "language": {
+    "en": "English",
+    "es": "Española",
+    "fr": "Français",
+    "pt": "Portugués",
+    "zh": "中国"
+  },
+  "common": {
+    "version": "Version {{ version }}",
+    "username": "Username",
+    "email": "Email",
+    "username.or.email": "Username or Email",
+    "password": "Password",
+    "confirm.password": "Confirm Password",
+    "back.to.login": "<b>Already have an account?</b> Login now!",
+    "copyright": "Copyright © 2019 Magpi. All Rights Reserved",
+    "page.size": "Page size",
+    "search": "Search...",
+    "form.error": {
+      "required": "{{ name }} is required",
+      "min.length": "{{ name }} should be at least {{ requiredLength }} characters",
+      "max.length": "{{ name }} can not be more than {{ requiredLength }} characters",
+      "email": "{{ name }} must be a valid email",
+      "must.match": "{{ name }} does not match"
+    }
+  },
+  "http.error": {
+    "timeout": "Request timeout!",
+    "common": "Something went wrong, please try again later."
+  },
+  "login": {
+    "persistent": "Keep me signed in",
+    "signin": "Login",
+    "forgot.password": "Forgot the password?",
+    "signup": "<b>Dont have an account?</b> Sign up now for free!"
+  },
+  "forgot.password": {
+    "submit": "Reset my password",
+    "success": "An email with instructions to reset your password has been sent."
+  },
+  "reset.password": {
+    "submit": "Reset my password",
+    "success": "Your password is reset successfully. You may now login with your new password."
+  },
+  "signup": {
+    "submit": "Signup",
+    "success": "You have registered successfully"
+  },
+  "home": {
+    "forms": "Forms",
+    "reports": "Reports",
+    "messaging": "Messaging",
+    "outbox": "Outbox",
+    "contacts": "Contacts",
+    "mobile": "Mobile",
+    "logged.in.as": "You are logged in as",
+    "profile": "Profile",
+    "logout": "Logout",
+    "sales": "Sales",
+    "form": {
+      "col": {
+        "name": "Form name",
+        "last.modified": "Last modified",
+        "last.added": "Last added",
+        "count": "Records",
+        "owner": "Owner",
+        "tags": "Tags"
+      }
+    }
+  }
+}

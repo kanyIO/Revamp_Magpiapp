@@ -1,0 +1,18 @@
+<div class="ag-name-value">
+    <span class="component form-inline">
+        <div class="form-group">
+            <label>
+                {{ "common.page.size" | translate }}
+            </label>
+            <select
+                class="mx-3 form-control"
+                [ngModel]="selectedSize"
+                (ngModelChange)="onChange($event)"
+            >
+                <option *ngFor="let size of sizes" [value]="size">
+                    {{ size }}
+                </option>
+            </select>
+        </div>
+    </span>
+</div>

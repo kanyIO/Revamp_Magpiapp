@@ -1,0 +1,14 @@
+<div class="btn-group" ngbDropdown>
+    <button class="btn btn-link text-light" ngbDropdownToggle>
+        {{ "language." + (currentLanguage$ | async) | translate }}
+    </button>
+    <div class="dropdown-menu" ngbDropdownMenu>
+        <button
+            *ngFor="let language of languages$ | async"
+            ngbDropdownItem
+            (click)="onLanguageButtonClick(language)"
+        >
+            {{ "language." + language | translate }}
+        </button>
+    </div>
+</div>

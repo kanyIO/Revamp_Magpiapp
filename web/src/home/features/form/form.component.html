@@ -1,0 +1,25 @@
+<div class="my-3 form-inline">
+    <div class="form-group w-100">
+        <div class="input-group w-100">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-white">
+                    <i class="mdi mdi-magnify text-primary"></i>
+                </span>
+            </div>
+            <input
+                type="text"
+                class="form-control border-left-0"
+                [(ngModel)]="searchQuery"
+                [placeholder]="'common.search' | translate"
+                (keyup.enter)="onSearchQuery()"
+            />
+        </div>
+    </div>
+</div>
+<ag-grid-angular
+    #agGrid
+    class="ag-theme-material"
+    [modules]="modules"
+    [gridOptions]="gridOptions"
+    [columnDefs]="columnDefs"
+></ag-grid-angular>

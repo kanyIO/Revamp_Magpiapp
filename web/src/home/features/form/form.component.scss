@@ -1,0 +1,7 @@
+// Variables
+@import "src/theme/app-var";
+//@import "src/home/features/form/";
+
+ag-grid-angular {
+    height: calc(100vh - #{$content-nav-padding + $content-grid-padding});
+}

@@ -1,0 +1,126 @@
+<div class="d-flex">
+    <nav
+        class="sidebar mh-100vh"
+        [class.expanded]="!collapsed"
+        [class.collapsed]="collapsed"
+    >
+        <div class="my-4 d-flex justify-content-center text-lowercase">
+            <img class="mr-2 logo" src="/assets/images/logo.png" alt="Magpi" />
+            <h1 class="font-weight-normal">
+                {{ "app.name" | translate }}
+            </h1>
+        </div>
+        <ul class="nav d-flex flex-column">
+            <li class="p-2 nav-item">
+                <a routerLink="./form" class="nav-link">
+                    <i class="h5 mr-3 mdi mdi-folder-text-outline"></i>
+                    <span class="menu-title text-dark">
+                        {{ "home.forms" | translate }}
+                    </span>
+                </a>
+            </li>
+            <li class="p-2 nav-item">
+                <a routerLink="./report" class="nav-link">
+                    <i class="h5 mr-3 mdi mdi-elevation-rise"></i>
+                    <span class="menu-title text-dark">
+                        {{ "home.reports" | translate }}
+                    </span>
+                </a>
+            </li>
+            <li class="p-2 nav-item">
+                <a routerLink="./messaging" class="nav-link">
+                    <i class="h5 mr-3 mdi mdi-email-outline"></i>
+                    <span class="menu-title text-dark">
+                        {{ "home.messaging" | translate }}
+                    </span>
+                </a>
+            </li>
+            <li class="p-2 nav-item">
+                <a routerLink="./outbox" class="nav-link">
+                    <i class="h5 mr-3 mdi mdi-email-variant"></i>
+                    <span class="menu-title text-dark">
+                        {{ "home.outbox" | translate }}
+                    </span>
+                </a>
+            </li>
+            <li class="p-2 nav-item">
+                <a routerLink="./contact" class="nav-link">
+                    <i class="h5 mr-3 mdi mdi-contacts"></i>
+                    <span class="menu-title text-dark">
+                        {{ "home.contacts" | translate }}
+                    </span>
+                </a>
+            </li>
+            <li class="p-2 nav-item">
+                <a routerLink="./mobile" class="nav-link">
+                    <i class="h5 mr-3 mdi mdi-cellphone"></i>
+                    <span class="menu-title text-dark">
+                        {{ "home.mobile" | translate }}
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div
+        class="mh-100vh content expanded"
+        [class.expanded]="!collapsed"
+        [class.collapsed]="collapsed"
+    >
+        <nav
+            class="navbar navbar-dark bg-primary justify-content-between fixed-top"
+        >
+            <button class="btn btn-primary" (click)="collapsed = !collapsed">
+                <i class="h4 mdi mdi-menu"></i>
+            </button>
+            <div class="mr-2 d-flex flex-row">
+                <app-language-dropdown class="mr-2"></app-language-dropdown>
+                <div class="btn-group" ngbDropdown>
+                    <button class="btn btn-link text-light" ngbDropdownToggle>
+                        {{ "home.logged.in.as" | translate }}
+                        <strong>{{ currentUserName$ | async }}</strong>
+                    </button>
+                    <div class="dropdown-menu" ngbDropdownMenu>
+                        <button ngbDropdownItem>
+                            {{ "home.profile" | translate }}
+                        </button>
+                        <button ngbDropdownItem (click)="onLogoutButtonClick()">
+                            {{ "home.logout" | translate }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="pb-2 px-2 page-content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="p-2 d-flex justify-content-between align-items-center">
+            <div class="text-muted">
+                {{ "common.copyright" | translate }}
+            </div>
+            <div class="text-primary">
+                {{
+                    "common.version" | translate: { version: version$ | async }
+                }}
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <a class="mr-2" href="tel://+1-202-643-2820">
+                    {{ "home.sales" | translate }}: +1-202-643-2820
+                </a>
+                <a
+                    class="mr-2 btn btn-social btn-twitter"
+                    href="https://twitter.com/Magpi_Mobile"
+                    target="_blank"
+                >
+                    <i class="mdi mdi-twitter"></i>
+                </a>
+                <a
+                    class="mr-2 btn btn-social btn-linkedin"
+                    href="https://www.linkedin.com/company/magpi"
+                    target="_blank"
+                >
+                    <i class="mdi mdi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

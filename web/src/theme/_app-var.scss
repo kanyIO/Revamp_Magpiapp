@@ -1,0 +1,26 @@
+$web-primary-color: #b43231;
+$web-secondary-color: #525152;
+
+$web-gray-400: #ced4da;
+
+// Bootstrap
+$font-size-base: 0.9rem;
+
+$font-weight-light: 100;
+$font-weight-normal: 300;
+$font-weight-bold: 400;
+
+$input-focus-border-color: $web-gray-400;
+$input-btn-focus-box-shadow: none;
+
+$link-hover-decoration: none;
+
+$theme-colors: (
+    "primary": $web-primary-color,
+    "secondary": $web-secondary-color,
+);
+
+// App
+$content-nav-padding: 4rem;
+$content-page-padding: 5rem;
+$content-grid-padding: 9rem;
