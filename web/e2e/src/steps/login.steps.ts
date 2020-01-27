@@ -15,5 +15,6 @@ When("I enter {string} and {string}", async (user, pass) => {
 });
 
 Then("Login will occur", async () => {
-    await page2.signin.click();
+return (await page2.signin.getWebElement()).click();
+    //await page2.signin.click();
 });
