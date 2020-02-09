@@ -1,0 +1,8 @@
+# compiled output
+/hooks
+/platforms
+
+# NativeScript Template
+*.js.map
+*.js
+!webpack.config.js
